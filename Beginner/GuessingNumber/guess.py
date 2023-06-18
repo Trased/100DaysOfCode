@@ -1,7 +1,7 @@
 import random
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100")
-computer = random.randint(0,100)
+computer = random.randint(1,100)
 pick = input("Choose a difficulty. Type 'easy' or 'hard': ")
 attempts = 0
 if pick == "easy":
