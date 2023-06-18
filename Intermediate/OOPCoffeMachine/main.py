@@ -18,7 +18,7 @@ if __name__ == "__main__":
                     coffeeMaker.make_coffee(menu.find_drink(pick))
 
         pick = input("Do you want something else? 'y' or 'n'")
-        if pick == "n":
+        if pick != "y":
             repeat = False
 
 
