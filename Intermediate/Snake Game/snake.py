@@ -72,10 +72,11 @@ class Snake:
     def snake_intersects_food(self, Food):
         return Food.get_food().pos()[0] - 20 < self.snakes[0].pos()[0] < Food.get_food().pos()[0] + 20 and Food.get_food().pos()[1] - 20 < self.snakes[0].pos()[1] < Food.get_food().pos()[1] + 20
 
-    def detect_collision_with_food(self, Food):
+    def detect_collision_with_food(self, Food, score):
         if self.snake_intersects_food(Food):
             Food.change_position()
             self.add_more_snakes()
+            score.increase_score()
             food_on_snake = True
             while food_on_snake:
                 for snake in self.snakes:
